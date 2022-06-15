@@ -1,0 +1,25 @@
+.header-listing {
+  display: flex;
+  padding: 10px;
+  margin: 0 0 0 50px;
+}
+
+.header-listing li {
+  padding-right: 20px;
+  list-style-type: none;
+}
+
+.header-listing li .active {
+  color: #2c3e50;
+  text-decoration: none;
+  background-color: #eb984e;
+  padding: 13px;
+  font-weight: bold;
+}
+
+.header-listing li a {
+  color: #d0d3d4;
+  text-decoration: none;
+  padding: 13px;
+  font-weight: bold;
+}
