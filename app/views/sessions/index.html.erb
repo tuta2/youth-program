@@ -1,2 +1,32 @@
-<h1>Sessions#index</h1>
-<p>Find me in app/views/sessions/index.html.erb</p>
+<section style="min-height: calc(90vh - 40px);padding: 180px 40px 100px 40px;">
+  <div style="background-color: rgba(174, 182, 191, 0.4);border-radius: 10px;width: 95%;margin: auto;padding: 20px;">
+    <div style="padding: 10px;">
+      <% flash.each do |type, msg| %>
+        <%= content_tag :div, msg, class: build_alert_classes(type) %>
+      <% end %>
+    </div>
+
+    <div style="padding: 0 40px 40px 40px;">
+      <div class="row">
+        <div class="col home-widget bottom-margin" type="button" onclick="location.href='investiture.html'">
+          <h1>Investiture</h1>
+          <i class="fa-solid fa-award"></i>
+        </div>
+        <div class="col home-widget bottom-margin" type="button" onclick="location.href='#'">
+          <h1>Badges</h1>
+          <i class="fa-solid fa-certificate"></i>
+        </div>
+        <div class="col home-widget bottom-margin" type="button" onclick="location.href='#'">
+          <h1>Patrol Leaders Course</h1>
+          <i class="fa-brands fa-leanpub"></i>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 home-widget bottom-margin" type="button" onclick="location.href='#'">
+          <h1>Pack Holiday</h1>
+          <i class="fa-solid fa-champagne-glasses"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

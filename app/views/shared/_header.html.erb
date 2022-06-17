@@ -1,0 +1,80 @@
+<header>
+  <div class="full-nav">
+    <div class="top-nav">
+      <div class="row">
+        <div class="col-5">
+          <div class="time-section">
+            <h6 style="display: none"><i class="fa fa-clock">&ensp;</i></h6>
+          </div>
+        </div>
+        <div class="col-7">
+          <div class="info-section">
+            <a href="mailto:info@youthprogram.com">
+              <h6 class="info-spacing">
+                <i class="fa fa-envelope">&ensp;</i>
+                <span class="hide-in-small-screens">info@youthprogram.com</span>
+              </h6>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-nav" id="stickyNav">
+      <div class="row">
+        <div class="logo-section col-2">
+          <a href="/" class="logo-link" title="Go To Home"><span class="nav-logo"></span></a>
+        </div>
+        <div class="content-section col-10">
+
+          <div class="hide-in-big-screens nav-item-positioning">
+            <ul>
+              <li>
+                <button class="btn bar-button" onclick="toggleButton()" aria-expanded="false">
+                  <span class="navbar-toggler-icon bar-size" id="firstIcon"></span>
+                  <span class="navbar-toggler-icon2 hide-second-icon bar-size"  id="secondIcon"></span>
+                </button>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="nav-content hide-in-small-screens">
+            <ul>
+              <li>
+                <div class="search-bar">
+                  <form id="form" novalidate="novalidate" action="/products" method="get">
+                    <input value="" class="form-input required" placeholder="Search..." type="search" name="search[name]" id="query">
+                    <button type="submit" class="search-color"><i class="fa fa-search" aria-hidden="true"></i></button> 
+                  </form>
+                </div>
+              </li>
+              <li><a href="#"><span><i class="fa-solid fa-circle-info">&ensp;</i>About Us</span></a></li>
+              <li><a href="#"><span><i class="fa-solid fa-bars-progress">&ensp;</i>Our Services</span></a></li>
+              <li><a href="#"><span><i class="fa-solid fa-phone">&ensp;</i>Contact Us</span></a></li>
+              <li><a href="/login"><span><i class="fa-solid fa-sign-in">&ensp;</i>Login</span></a></li>
+            </ul>
+          </div>
+
+          <!-- Mobile Menu -->
+          <div id="jsSidebar" class="mobile-menu hide-in-big-screens">
+            <div class="side-nav-top"></div>
+            <ul>
+              <li>
+                <div class="search-bar2">
+                  <form id="form" novalidate="novalidate" action="/products" method="get">
+                    <input value="" class="form-input required" placeholder="Search..." type="search" name="search[name]" id="query">
+                    <button type="submit" class="search-color"><i class="fa fa-search" aria-hidden="true"></i></button> 
+                  </form>
+                </div>
+              </li>
+              <li><a href="#"><span><i class="fa-solid fa-circle-info">&ensp;</i>About Us</span></a></li>
+              <li><a href="#"><span><i class="fa-solid fa-bars-progress">&ensp;</i>Our Services</span></a></li>
+              <li><a href="#"><span><i class="fa-solid fa-phone">&ensp;</i>Contact Us</span></a></li>
+              <li><a href="/login"><span><i class="fa-solid fa-sign-in">&ensp;</i>Login</span></a></li>
+            </ul>
+          </div>
+          <!-- End Of Mobile Menu -->
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

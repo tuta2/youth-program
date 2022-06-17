@@ -1,2 +1,57 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<div class="limiter">
+  <div class="container-login100" style="padding-top: 160px;padding-bottom: 60px;">
+    <div class="wrap-login100">
+      <div class="login100-form-title" style="background-image: url(/assets/login-image.png);">
+        <span class="login100-form-title-1">
+          <b>Register</b>
+        </span>
+      </div>
+
+      <div style="padding: 10px;">
+        <% flash.each do |type, msg| %>
+          <%= content_tag :div, msg, class: build_alert_classes(type) %>
+        <% end %>
+      </div>
+
+      <form class="login100-form validate-form" action="/users" method="post">
+        <div class="wrap-input100 validate-input m-b-26" data-validate="Email is required" style="margin-bottom: 20px !important;">
+          <span class="label-input100">Email</span>
+          <input class="input100" type="text" name="user[email]" placeholder="Enter Email" autofocus="autofocus" autocomplete="off">
+          <span class="focus-input100"></span>
+        </div>
+
+        <div class="wrap-input100 validate-input m-b-18" data-validate = "Password is required" style="margin-bottom: 20px !important;">
+          <span class="label-input100">Password</span>
+          <input class="input100" type="password" name="user[password]" placeholder="Enter Password" autocomplete="off">
+          <span class="focus-input100"></span>
+        </div>
+
+        <div class="flex-sb-m w-full p-b-30">
+          <div class="contact100-form-checkbox" style="margin-bottom: 20px !important;">
+            <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+            <label class="label-checkbox100" for="ckb1">
+              Remember me
+            </label>
+          </div>
+
+          <div style="margin-bottom: 40px !important;">
+            <a href="#" class="txt1">
+              <h6>Forgot Password?</h6>
+            </a>
+          </div>
+        </div>
+
+        <div class="container-login100-form-btn" style="margin-bottom: 40px !important;">
+          <button type="submit" class="login100-form-btn">
+            Sign Up
+          </button>
+        </div>
+
+        <a href="/register" style="text-align: right !important;width: 100%;padding-bottom: 50px;">
+          <h6>Registered? Signin!</h6>
+        </a>
+      </form>
+
+    </div>
+  </div>
+</div>

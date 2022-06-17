@@ -1,0 +1,145 @@
+/*Medium Screens*/
+@media only screen and (max-width: 992px) {
+  .left-padding-sm {
+    padding-left: 40px;
+  }
+}
+
+/*Small Screens*/
+@media only screen and (max-width: 640px) {
+  .left-padding-sm {
+    padding-left: 15px;
+  }
+}
+
+footer {
+  position:absolute;
+  margin-bottom: 0 !important;
+  width:100%;
+  background:#352b2a;
+  text-align: left !important;
+}
+
+.top-section {
+  background-color: #239B56;
+  padding: 40px;
+  color: #C7C7C7;
+}
+
+footer .top-section h5 {
+  font-size: 1rem;
+}
+
+footer .top-section h4 {
+  font-size: 1.3rem;
+  color: #ECF0F1;
+}
+
+footer .top-section h4:hover {
+  font-size: 1.3rem;
+  color: #34495E;
+}
+
+.footer-logo-link {
+  margin-left: 0;
+  padding-bottom: 0.5vh;
+}
+
+.section-spacing {
+  padding-bottom: 0.5vw;
+}
+
+.footer-logo {
+  position: absolute;
+  z-index: 0;
+  background-image: url("../../../assets/logo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 142px;
+  height: 74px;
+  border-radius: 5px;
+}
+
+.footer-logo:hover {
+  box-shadow: 0 0 15px #8E44AD;
+}
+
+.bottom-info {
+  padding-top: 90px;
+  text-align: justify;
+}
+
+.bottom-info:hover {
+  color: #E78200;
+}
+
+.links {
+  padding-top: 20px;
+  margin-left: -14px;
+}
+
+.links ol li {
+  padding-bottom: 10px;
+}
+
+.footer-link {
+  color: #C7C7C7;
+}
+
+.footer-link:hover {
+  color: #E78200;
+}
+
+.footer-payment {
+  padding-top: 10px;
+  font-size: 22px;
+}
+
+.footer-payment i:hover {
+  color: #E78200;
+}
+
+.socail-links {
+  padding-top: 2px;
+}
+
+.socail-content {
+  display: flex;
+  font-size: 22px;
+}
+
+.socail-content li {
+  padding-right: 10px;
+
+}
+
+.socail-content li a {
+  background-color: #c1b2ef;
+  padding: 14px;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.socail-content li a:hover {
+  background-color: #3498DB;
+}
+
+.socail-content li a:hover {
+  color: #c1b2ef;
+}
+
+.bottom-section {
+  border-top: 1px solid #C7C7C7;
+  text-align: center;
+  font-size: 18px;
+  color: #D0D3D4;
+}
+
+.bottom-section:hover {
+  color: #E78200;
+}
+
+.bt-spacing {
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
