@@ -5,5 +5,9 @@ Rails.application.routes.draw do
   resources :users
   get "register", to: "users#new"
 
+  resources :investitures
+  resources :coasts
+  resources :mombasas
+
   root "sessions#index"
 end

@@ -1,0 +1,2 @@
+class Mombasa < ApplicationRecord
+end

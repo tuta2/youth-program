@@ -1,0 +1,2 @@
+class Investiture < ApplicationRecord
+end

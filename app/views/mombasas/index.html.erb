@@ -1,0 +1,80 @@
+<section style="min-height: calc(90vh - 40px);padding: 180px 40px 100px 40px;">
+  <div style="background-color: rgba(174, 182, 191, 0.4);border-radius: 10px;width: 95%;margin: auto;padding: 20px;">
+    <div style="padding: 10px;">
+      <% flash.each do |type, msg| %>
+        <%= content_tag :div, msg, class: build_alert_classes(type) %>
+      <% end %>
+    </div>
+
+    <div style="padding: 0 40px 40px 40px;">
+      <h3>SUB-COUNTY INVESTITURE</h3>
+   
+      <table>
+        <tr>
+          <th>SUB-COUNTY</th>
+          <th>INVESTITURE</th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th>TOTAL</th>
+        </tr>
+        <tr>
+          <td></td>
+          <td><b>Sungura</b></td>
+          <td><b>Chipukizi</b></td>
+          <td><b>Mwamba</b></td>
+          <td><b>Jasiri</b></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Mvita</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Nyali</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Changamwe</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Kisauni</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Jomvu</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Likoni</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</section>
