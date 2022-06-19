@@ -27,7 +27,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_17_102426) do
   end
 
   create_table "mombasas", force: :cascade do |t|
-    t.string "detail"
+    t.string "sub_county"
+    t.integer "investiture_sungura"
+    t.integer "investiture_chipukizi"
+    t.integer "investiture_mwamba"
+    t.integer "investiture_jasiri"
+    t.integer "total"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

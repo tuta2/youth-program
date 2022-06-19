@@ -12,7 +12,7 @@ module SessionsHelper
   end
 
   def authorized
-    if (controller_name != 'users') && (controller_name != 'contacts') && (controller_name != 'services')
+    if (controller_name != 'users') && (controller_name != 'contacts') && (controller_name != 'services') && (controller_name != 'mombasas')
       redirect_to '/login' unless logged_in?
     end
   end

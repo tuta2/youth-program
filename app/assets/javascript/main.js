@@ -1,3 +1,24 @@
+// Save In PDF & Excel
+$("#PrintNow").on("click", function () {
+  var divContents = $("#dvContainer").html();
+  var printWindow = window.open('', '', 'height=400,width=800');
+  printWindow.document.write('<html><head><title>documentRecord</title>');
+  printWindow.document.write('</head><body>');
+  printWindow.document.write(divContents);
+  printWindow.document.write('</body></html>');
+  printWindow.document.close();
+  printWindow.print();
+  printWindow.close();
+});
+
+
+$("#btnExport").click(function(e) {
+  window.open('data:application/vnd.ms-excel,' + 
+    '<table>' + $('#dvData > table').html() + '</table>');
+  e.preventDefault();
+});
+
+// Show different buttons and pages
 $(document).ready(function() {
   var page1 = document.getElementById("writing");
   var page2 = document.getElementById("editing");
