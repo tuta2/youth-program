@@ -1,0 +1,2 @@
+class Nyanza < ApplicationRecord
+end

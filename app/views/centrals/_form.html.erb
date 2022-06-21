@@ -1,0 +1,17 @@
+<%= form_with(model: central) do |form| %>
+  <% if central.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(central.errors.count, "error") %> prohibited this central from being saved:</h2>
+
+      <ul>
+        <% central.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

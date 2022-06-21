@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @uppereastern %>
+
+<div>
+  <%= link_to "Edit this uppereastern", edit_uppereastern_path(@uppereastern) %> |
+  <%= link_to "Back to uppereasterns", uppereasterns_path %>
+
+  <%= button_to "Destroy this uppereastern", @uppereastern, method: :delete %>
+</div>

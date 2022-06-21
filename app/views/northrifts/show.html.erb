@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @northrift %>
+
+<div>
+  <%= link_to "Edit this northrift", edit_northrift_path(@northrift) %> |
+  <%= link_to "Back to northrifts", northrifts_path %>
+
+  <%= button_to "Destroy this northrift", @northrift, method: :delete %>
+</div>

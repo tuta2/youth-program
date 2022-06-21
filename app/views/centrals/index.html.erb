@@ -1,0 +1,41 @@
+<section style="min-height: calc(90vh - 40px);padding: 180px 40px 100px 40px;">
+  <div style="background-color: rgba(174, 182, 191, 0.4);border-radius: 10px;width: 95%;margin: auto;padding: 20px;">
+    <div style="padding: 10px;">
+      <% flash.each do |type, msg| %>
+        <%= content_tag :div, msg, class: build_alert_classes(type) %>
+      <% end %>
+    </div>
+
+    <div style="padding: 0 40px 40px 40px;">
+      <h3>COUNTY</h3>
+      <div class="row">
+        <div class="col home-widget bottom-margin" type="button" onclick="location.href='/mombasas'">
+          <h1>Nyandarua</h1>
+          <i class="fa-solid fa-map-location"></i>
+        </div>
+        <div class="col home-widget bottom-margin" type="button" onclick="location.href='#'">
+          <h1>Nyeri</h1>
+          <i class="fa-solid fa-map-location"></i>
+        </div>
+        <div class="col home-widget bottom-margin" type="button" onclick="location.href='#'">
+          <h1>Kirinyaga</h1>
+          <i class="fa-solid fa-map-location"></i>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col home-widget bottom-margin" type="button" onclick="location.href='#'">
+          <h1>Murang'a</h1>
+          <i class="fa-solid fa-map-location"></i>
+        </div>
+        <div class="col home-widget bottom-margin" type="button" onclick="location.href='#'">
+          <h1>Kiambu</h1>
+          <i class="fa-solid fa-map-location"></i>
+        </div>
+        <div class="col home-widget bottom-margin" type="button" onclick="location.href='#'">
+          <h1>Laikipia</h1>
+          <i class="fa-solid fa-map-location"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

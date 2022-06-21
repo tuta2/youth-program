@@ -1,0 +1,57 @@
+<div class="limiter">
+  <div class="container-login100" style="padding-top: 160px;padding-bottom: 60px;">
+    <div class="wrap-login100">
+      <div class="login100-form-title" style="background-image: url(/assets/login-image.png);">
+        <span class="login100-form-title-1">
+          <b>Edit Record</b>
+        </span>
+      </div>
+
+      <div style="padding: 10px;">
+        <% flash.each do |type, msg| %>
+          <%= content_tag :div, msg, class: build_alert_classes(type) %>
+        <% end %>
+      </div>
+
+      <%= form_for @kwale, url: {action: "update"}, html: {class: "login100-form validate-form"} do |f| %>
+        <div class="row" style="width: 100%;">
+          <div class="wrap-input100 validate-input m-b-26" data-validate="Sub County is required" style="margin-bottom: 20px !important;">
+            <span class="label-input100">Sub County:</span>
+            <%= f.text_field :sub_county, class: 'input100', value: @kwale.sub_county %>
+            <span class="focus-input100"></span>
+          </div>
+
+          <div class="wrap-input100 validate-input m-b-26" data-validate="Sungura is required" style="margin-bottom: 20px !important;">
+            <span class="label-input100">Sungura:</span>
+            <%= f.text_field :investiture_sungura, class: 'input100', value: @kwale.investiture_sungura %>
+            <span class="focus-input100"></span>
+          </div>
+
+          <div class="wrap-input100 validate-input m-b-26" data-validate="Chipukizi is required" style="margin-bottom: 20px !important;">
+            <span class="label-input100">Chipukizi:</span>
+            <%= f.text_field :investiture_chipukizi, class: 'input100', value: @kwale.investiture_chipukizi %>
+            <span class="focus-input100"></span>
+          </div>
+
+          <div class="wrap-input100 validate-input m-b-26" data-validate="Mwamba is required" style="margin-bottom: 20px !important;">
+            <span class="label-input100">Mwamba:</span>
+            <%= f.text_field :investiture_mwamba, class: 'input100', value: @kwale.investiture_mwamba %>
+            <span class="focus-input100"></span>
+          </div>
+
+          <div class="wrap-input100 validate-input m-b-26" data-validate="Jasiri is required" style="margin-bottom: 20px !important;">
+            <span class="label-input100">Jasiri:</span>
+            <%= f.text_field :investiture_jasiri, class: 'input100', value: @kwale.investiture_jasiri %>
+            <span class="focus-input100"></span>
+          </div>
+
+
+          <div class="container-login100-form-btn" style="margin: 40px 0 40px 0 !important;">
+            <button type="submit" class="login100-form-btn">Edit!</button>
+          </div>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+</div>

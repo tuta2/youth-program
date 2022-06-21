@@ -1,0 +1,17 @@
+<%= form_with(model: northeastern) do |form| %>
+  <% if northeastern.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(northeastern.errors.count, "error") %> prohibited this northeastern from being saved:</h2>
+
+      <ul>
+        <% northeastern.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

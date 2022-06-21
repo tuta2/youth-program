@@ -1,0 +1,2 @@
+module NortheasternsHelper
+end

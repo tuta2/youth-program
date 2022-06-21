@@ -1,0 +1,2 @@
+class Uppereastern < ApplicationRecord
+end

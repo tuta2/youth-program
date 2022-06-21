@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @nyanza %>
+
+<div>
+  <%= link_to "Edit this nyanza", edit_nyanza_path(@nyanza) %> |
+  <%= link_to "Back to nyanzas", nyanzas_path %>
+
+  <%= button_to "Destroy this nyanza", @nyanza, method: :delete %>
+</div>

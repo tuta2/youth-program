@@ -1,0 +1,2 @@
+module NorthriftsHelper
+end

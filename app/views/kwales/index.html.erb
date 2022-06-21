@@ -1,0 +1,150 @@
+<section style="min-height: calc(90vh - 40px);padding: 180px 40px 100px 40px;">
+  <div style="background-color: rgba(174, 182, 191, 0.4);border-radius: 10px;width: 95%;margin: auto;padding: 20px 20px 80px 20px;">
+
+    <div style="padding: 50px 0 40px 40px;text-align: left;">
+      <a class="record-button1" type="button" onclick="location.href='/kwales/new'">
+        <i class="fa-solid fa-plus">&ensp;</i>
+        <span>Add Record</span>
+      </a>
+    </div>
+
+    <div style="padding: 10px;">
+      <% flash.each do |type, msg| %>
+        <%= content_tag :div, msg, class: build_alert_classes(type) %>
+      <% end %>
+    </div>
+
+    <!-- Table To Show In Website -->
+    <div style="padding: 0 40px 20px 40px;">
+      <h2 style="padding-bottom: 20px;">SUB-COUNTY INVESTITURE</h2>
+      
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <tr style="font-size: 1.5rem;">
+            <th>SUB-COUNTY</th>
+            <th colspan="4">INVESTITURE</th>
+            <th>TOTAL</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+          <tr style="font-size: 1.4rem;">
+            <td></td>
+            <td><b>Sungura</b></td>
+            <td><b>Chipukizi</b></td>
+            <td><b>Mwamba</b></td>
+            <td><b>Jasiri</b></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+        <% @kwales.each do |kwale| %>
+            <tr style="font-size: 1.2rem;">
+              <td><b><%= kwale.sub_county %></b></td>
+              <td><%= kwale.investiture_sungura %></td>
+              <td><%= kwale.investiture_chipukizi %></td>
+              <td><%= kwale.investiture_mwamba %></td>
+              <td><%= kwale.investiture_jasiri %></td>
+              <td><b><%= kwale.total %></b></td>
+              <td><b><%= link_to '', edit_kwale_path(kwale), :class => "fas fa-edit" %></b></td>
+              <td>
+                <b>
+                  <%= button_to '', kwale_path(kwale), method: :delete, data: {confirm: 'Are you sure?'}, :class => "fas fa-trash" %>
+                </b>
+              </td>
+            </tr>
+          <% end %>
+          
+        </table>
+      </div>
+    </div>
+
+    <div style="display: none;">
+      <!-- Table To Save In Excel -->
+      <div id="dvData">
+        <table>
+          <tr>
+            <th>SUB-COUNTY</th>
+            <th>INVESTITURE</th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th>TOTAL</th>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td><b>Sungura</b></td>
+            <td><b>Chipukizi</b></td>
+            <td><b>Mwamba</b></td>
+            <td><b>Jasiri</b></td>
+            <td></td>
+          </tr>
+
+          <% @kwales.each do |kwale| %>
+            <tr style="font-size: 1.2rem;">
+              <td><b><%= kwale.sub_county %></b></td>
+              <td><%= kwale.investiture_sungura %></td>
+              <td><%= kwale.investiture_chipukizi %></td>
+              <td><%= kwale.investiture_mwamba %></td>
+              <td><%= kwale.investiture_jasiri %></td>
+              <td><b><%= kwale.total %></b></td>
+            </tr>
+          <% end %>
+          
+        </table>
+      </div>
+      <!-- Table To Save In PDF -->
+      <section style="min-height: calc(90vh - 40px);padding: 80px 40px 100px 40px;" id="dvContainer">
+        <div style="background-color: rgba(174, 182, 191, 0.1);border-radius: 10px;width: 95%;margin: auto;padding: 100px 20px 280px 20px;">
+
+          <div style="padding: 0 40px 20px 40px;">
+            <h3 style="padding-bottom: 20px;text-align: center;">SUB-COUNTY INVESTITURE</h3>
+            
+            <div class="table-responsive">
+              <table class="table table-hover" style="font-family: arial, sans-serif;border-collapse: collapse;width: 100%;">
+                <tr style="font-size: 1.1rem;background-color: #C7CCD1;">
+                  <th style="border: 1px solid #85929E;padding: 8px;">SUB-COUNTY</th>
+                  <th colspan="4" style="border: 1px solid #85929E;padding: 8px;">INVESTITURE</th>
+                  <th style="border: 1px solid #85929E;padding: 8px;">TOTAL</th>
+                </tr>
+                <tr style="font-size: 1rem;background-color: #ECF0F1;">
+                  <td style="border: 1px solid #85929E;padding: 8px;text-align: center;"></td>
+                  <td style="border: 1px solid #85929E;padding: 8px;text-align: center;"><b>Sungura</b></td>
+                  <td style="border: 1px solid #85929E;padding: 8px;text-align: center;"><b>Chipukizi</b></td>
+                  <td style="border: 1px solid #85929E;padding: 8px;text-align: center;"><b>Mwamba</b></td>
+                  <td style="border: 1px solid #85929E;padding: 8px;text-align: center;"><b>Jasiri</b></td>
+                  <td style="border: 1px solid #85929E;padding: 8px;text-align: center;"></td>
+                </tr>
+
+                <% @kwales.each do |kwale| %>
+                  <tr style="font-size: 0.9rem;background-color: #ECF0F1;">
+                    <td style="border: 1px solid #85929E;padding: 8px;text-align: center;"><b><%= kwale.sub_county %></b></td>
+                    <td style="border: 1px solid #85929E;padding: 8px;text-align: center;"><%= kwale.investiture_sungura %></td>
+                    <td style="border: 1px solid #85929E;padding: 8px;text-align: center;"><%= kwale.investiture_chipukizi %></td>
+                    <td style="border: 1px solid #85929E;padding: 8px;text-align: center;"><%= kwale.investiture_mwamba %></td>
+                    <td style="border: 1px solid #85929E;padding: 8px;text-align: center;"><%= kwale.investiture_jasiri %></td>
+                    <td style="border: 1px solid #85929E;padding: 8px;text-align: center;"><b><%= kwale.total %></b></td>
+                  </tr>
+                <% end %>
+           
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div style="text-align: right;padding: 20px 40px 20px 0;">
+      <a id="btnExport" type="button" class="record-button1">
+        <i class="fa-solid fa-file-excel">&ensp;</i>
+        <span>Export Excel</span>
+      </a>
+
+      <a class="record-button2" id="PrintNow" type="button">
+        <i class="fa-solid fa-file-pdf">&ensp;</i>
+        <span>Export PDF</span>
+      </a>
+    </div>
+  </div>  
+</section>

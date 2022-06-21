@@ -1,0 +1,17 @@
+<%= form_with(model: lowereastern) do |form| %>
+  <% if lowereastern.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(lowereastern.errors.count, "error") %> prohibited this lowereastern from being saved:</h2>
+
+      <ul>
+        <% lowereastern.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

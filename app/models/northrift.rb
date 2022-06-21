@@ -1,0 +1,2 @@
+class Northrift < ApplicationRecord
+end

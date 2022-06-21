@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @packholiday %>
+
+<div>
+  <%= link_to "Edit this packholiday", edit_packholiday_path(@packholiday) %> |
+  <%= link_to "Back to packholidays", packholidays_path %>
+
+  <%= button_to "Destroy this packholiday", @packholiday, method: :delete %>
+</div>

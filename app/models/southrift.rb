@@ -1,0 +1,2 @@
+class Southrift < ApplicationRecord
+end

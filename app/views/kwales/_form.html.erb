@@ -1,0 +1,17 @@
+<%= form_with(model: kwale) do |form| %>
+  <% if kwale.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(kwale.errors.count, "error") %> prohibited this kwale from being saved:</h2>
+
+      <ul>
+        <% kwale.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

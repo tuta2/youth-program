@@ -1,0 +1,2 @@
+class Nairobi < ApplicationRecord
+end

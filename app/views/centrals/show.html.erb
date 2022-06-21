@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @central %>
+
+<div>
+  <%= link_to "Edit this central", edit_central_path(@central) %> |
+  <%= link_to "Back to centrals", centrals_path %>
+
+  <%= button_to "Destroy this central", @central, method: :delete %>
+</div>

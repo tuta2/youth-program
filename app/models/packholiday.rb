@@ -1,0 +1,2 @@
+class Packholiday < ApplicationRecord
+end

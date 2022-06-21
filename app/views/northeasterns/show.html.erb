@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @northeastern %>
+
+<div>
+  <%= link_to "Edit this northeastern", edit_northeastern_path(@northeastern) %> |
+  <%= link_to "Back to northeasterns", northeasterns_path %>
+
+  <%= button_to "Destroy this northeastern", @northeastern, method: :delete %>
+</div>

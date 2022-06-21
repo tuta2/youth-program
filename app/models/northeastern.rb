@@ -1,0 +1,2 @@
+class Northeastern < ApplicationRecord
+end

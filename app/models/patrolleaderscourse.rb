@@ -1,0 +1,2 @@
+class Patrolleaderscourse < ApplicationRecord
+end

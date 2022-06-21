@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @nairobi %>
+
+<div>
+  <%= link_to "Edit this nairobi", edit_nairobi_path(@nairobi) %> |
+  <%= link_to "Back to nairobis", nairobis_path %>
+
+  <%= button_to "Destroy this nairobi", @nairobi, method: :delete %>
+</div>

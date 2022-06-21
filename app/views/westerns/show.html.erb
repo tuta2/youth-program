@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @western %>
+
+<div>
+  <%= link_to "Edit this western", edit_western_path(@western) %> |
+  <%= link_to "Back to westerns", westerns_path %>
+
+  <%= button_to "Destroy this western", @western, method: :delete %>
+</div>
